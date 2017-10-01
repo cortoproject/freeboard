@@ -1,0 +1,5 @@
+in package /freeboard
+
+class service: httpserver/files :/
+    config_url: string
+    int16 construct()

@@ -1,0 +1,11 @@
+{
+    "id": "freeboard",
+    "type": "package",
+    "value": {
+        "description": "Allows running freeboard as service",
+        "author": "Sander Mertens",
+        "version": "1.0.0",
+        "language": "c",
+        "dependencies": ["corto/httpserver"]
+    }
+}
