@@ -1,5 +1,11 @@
 in package /freeboard
+use corto/httprouter
 
-class service: httpserver/files :/
-    config_url: string
+x/token file: "[-a-zA-Z_0-9\\. \\/]*"
+
+httprouter/Router service :/
+    member config_url: string
+    GET home: "/", file = "index.html"
+    GET res: "/{:file}"
+    GET config:  "/config"
     int16 construct()

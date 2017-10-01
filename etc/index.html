@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>freeboard</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
 	<meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -28,14 +29,18 @@
 
                     });
 
-                    var config = $.get("config.json", function(data) {
-                        console.log("-- configuration loaded:");
-                        console.log(data);
+                    $.get("config", function(config_url) {
+                        console.log("loading configuration '" + config_url + "'");
 
-                        // Load freeboard configuration
-                        freeboard.loadDashboard(data, function() {
-                            console.log("-- configuration ready");
-                        });
+                        var config = $.get(config_url, function(data) {
+                            console.log("trace: configuration loaded:");
+                            console.log(JSON.stringify(data));
+
+                            // Load freeboard configuration
+                            freeboard.loadDashboard(data, function() {
+                                console.log("configuration ready");
+                            });
+                        });                        
                     });
                 });
     </script>
