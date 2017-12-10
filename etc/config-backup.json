@@ -1,0 +1,111 @@
+{
+    "version": 1,
+    "allow_edit": true,
+    "plugins": [],
+    "panes": [
+        {
+            "title": "Foobar",
+            "width": 1,
+            "row": {
+                "3": 1,
+                "4": 1
+            },
+            "col": {
+                "3": 2,
+                "4": 3
+            },
+            "col_width": 1,
+            "widgets": [
+                {
+                    "type": "sparkline",
+                    "settings": {
+                        "title": "JC.RR5.NAE9.ConfRoom.Padre.Island01",
+                        "value": [
+                            "datasources[\"JC.RR5.NAE9.ConfRoom.Padre.Island01\"][0][\"value\"][\"value\"]"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "width": 1,
+            "row": {
+                "3": 1,
+                "4": 1
+            },
+            "col": {
+                "3": 3,
+                "4": 4
+            },
+            "col_width": 1,
+            "widgets": [
+                {
+                    "type": "sparkline",
+                    "settings": {
+                        "title": "KMC.BAC-121036CE01",
+                        "value": [
+                            "datasources[\"KMC.BAC-121036CE01\"][0][\"value\"][\"value\"]"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "title": "",
+            "width": 1,
+            "row": {
+                "3": 1,
+                "4": 1
+            },
+            "col": {
+                "3": 1,
+                "4": 2
+            },
+            "col_width": 1,
+            "widgets": [
+                {
+                    "type": "sparkline",
+                    "settings": {
+                        "title": "GS1-AC-Drive01",
+                        "value": [
+                            "datasources[\"GS1-AC-Drive01\"][0][\"value\"][\"value\"]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "datasources": [
+        {
+            "name": "JC.RR5.NAE9.ConfRoom.Padre.Island01",
+            "type": "JSON",
+            "settings": {
+                "url": "/api/deviceservice/59a965c2e4b0c3937cb06f97/JC.RR5.NAE9.ConfRoom.Padre.Island01?limit=1",
+                "use_thingproxy": true,
+                "refresh": 5,
+                "method": "GET"
+            }
+        },
+        {
+            "name": "GS1-AC-Drive01",
+            "type": "JSON",
+            "settings": {
+                "url": "/api/deviceservice/59a965c2e4b0c3937cb06f97/GS1-AC-Drive01?limit=1",
+                "use_thingproxy": true,
+                "refresh": 5,
+                "method": "GET"
+            }
+        },
+        {
+            "name": "KMC.BAC-121036CE01",
+            "type": "JSON",
+            "settings": {
+                "url": "/api/deviceservice/59a965c2e4b0c3937cb06f97/KMC.BAC-121036CE01?limit=1",
+                "use_thingproxy": true,
+                "refresh": 5,
+                "method": "GET"
+            }
+        }
+    ],
+    "columns": 3
+}
