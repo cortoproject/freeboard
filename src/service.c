@@ -5,7 +5,7 @@
 int16_t freeboard_service_construct(
     freeboard_service this)
 {
-    corto_ptr_setstr(&httprouter_Service(this)->path, FREEBOARD_ETC);
+    corto_set_str(&httprouter_Service(this)->path, FREEBOARD_ETC);
     return corto_super_construct(this);
 }
 
@@ -32,4 +32,3 @@ corto_string freeboard_service_res(
 {
     return httprouter_route_fileAction(freeboard_service_res_o, this, request, NULL, data->file);
 }
-
