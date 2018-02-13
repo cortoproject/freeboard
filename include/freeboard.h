@@ -8,7 +8,6 @@
 #define FREEBOARD_H
 
 #include <corto/corto.h>
-#include <corto/corto.h>
 #include <freeboard/_project.h>
 #include <corto/x/c/c.h>
 #include <corto/httprouter/c/c.h>
